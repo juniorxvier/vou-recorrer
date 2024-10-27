@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    gap: 150px;
+    height: 100vh;
+}
+
+#container #imgs img{
+    width: 400px;
+    border-radius: 20px;
+}
+
+#text{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+#text h1{
+    color: rgb(240, 236, 0);
+    font-size: 3rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+#text p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: normal;
+    text-align: justify;
+    margin: 30px;
+
+}
+
+.voltar{
+    display: flex;
+    position: absolute;
+    top: 90%;
+    right: 5%;
+}
+
+.voltar a{
+    text-decoration: none;
+    text-align: center;
+    width: 180px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    color: black;
+    align-items: center;
+    background-color: rgb(240, 236, 0);
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.719);
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
+}
+
+
+a:hover{
+    transform: scale(1.1);
+    background-color: black;
+    color: rgb(240, 236, 0);
+}
+
+.cards{
+    perspective: 800px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 400px;
+    height: 450px;
+    background: url("loja.png");
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(104, 104, 104, 0.527);
+    position: relative;
+    margin: 25px;
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.5s;
+}
+
+.card:hover{
+    transform: translateZ(10px) rotateX(20deg) rotateY(30deg);
+}
+
+.card-title{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 80%;
+    right: 25px;
+    transform: translateY(-50%);
+    transition: transform 0.5s;
+}
+
+.card:hover .card-title{
+    transform: translateZ(50px);
+}
+
+@media (max-width: 1024px){
+    body{
+        overflow-x: hidden;
+    }
+    
+    section {
+        display: flex;
+        width: 100%;
+        gap: 1px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    #text {
+        margin-top: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 330px;
+    }
+
+    #text h1 {
+        font-size: 1.8rem;  
+    }
+
+    #text p {
+        font-size: 0.9rem;
+        margin: 2px;
+    }
+
+    .voltar {
+        right: 7%;
+    }
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    section {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: -45px;
+    }
+
+
+    #text {
+        margin-top: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 330px;
+    }
+
+    #text h1 {
+        font-size: 1.8rem;  
+    }
+
+    #text p {
+        font-size: 0.9rem;
+        margin: 5px;
+    }
+
+    .voltar {
+
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+}
+}
+
+@media (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    
+    section {
+        flex-direction: column;
+        width: 100%;
+        top: -40px;
+    }
+
+    .cards{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 200px;
+    }
+
+
+    #text {
+        margin-top: -0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 330px;
+    }
+
+    #text h1 {
+        font-size: 1.8rem;  
+    }
+
+    #text p {
+        font-size: 0.9rem;
+        margin: 10px;
+    }
+
+    .voltar {
+        top: 115%;
+    }
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        max-width: 280px;
+    }
+}
+
+@media ( max-width:  375px) and ( max-height: 812px){
+    .voltar {
+        top: 120%;
+    }
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+} 
+
+@media ( max-width:  375px) and ( max-height: 670px) {
+    .voltar {
+        top: 134%;
+    }
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+}
+
+@media ( max-width:  320px) {
+    .voltar {
+        top: 148%;
+    }
+
+    .voltar a {
+        width: 120px;
+        height: 20px;
+        font-size: 0.8rem;
+    }
+}
