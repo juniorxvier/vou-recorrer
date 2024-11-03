@@ -225,7 +225,14 @@ body{
 
 .titulos{
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .titulos{
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
 }
 
 div, h2{
