@@ -175,16 +175,86 @@ h2, h3{
   gap: 45px;
 }
 
+body{
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+
+@keyframes appear {
+  from {
+    transform: scale(0.5);
+    clip-path: inset(100% 100% 0 0);
+  }
+  to {
+    transform: scale(1);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+div {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 18%;
+}
+
 .card{
   max-width: 305px;
   height: 100vh;
-  border-radius: 16px;
+  border-radius: 25px;
   overflow: hidden;
   position: relative;
   transition: 0.5s;
   cursor: pointer;
   margin-top: 70px;
   margin-bottom: 10px;
+  filter: blur(4px);
+}
+
+.card:hover{
+  filter: blur(0);
 }
 
 .card img{
@@ -192,7 +262,6 @@ h2, h3{
   height: 100%;
   object-fit: cover;
   pointer-events: none;
-  opacity: 0.5;
   transition: 0.5s;
 }
 .card .layer{
