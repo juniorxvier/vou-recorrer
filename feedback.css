@@ -1,0 +1,86 @@
+
+/* Contêiner do Carrossel */
+.feedback-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Carrossel - faz os itens deslizarem horizontalmente */
+.feedback-carousel {
+    display: flex;
+    width: 400%; /* Total de 4 itens */
+    animation: slide 16s infinite; /* Animação de deslizar */
+}
+
+/* Itens do feedback */
+.feedback-item {
+    flex: 0 0 25%; /* Cada item ocupa 25% da largura */
+    padding: 30px;
+    background: #fff;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeIn 2s forwards; /* Animação de fade-in */
+}
+
+.feedback-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.feedback-item p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.feedback-item h5 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Animação de deslizamento com pausas */
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(0);
+    }
+    30% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-25%);
+    }
+    60% {
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(-50%);
+    }
+    90% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(-75%);
+    }
+}
+
+/* Fade-in para os itens */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
