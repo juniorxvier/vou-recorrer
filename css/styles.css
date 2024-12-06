@@ -456,10 +456,13 @@ div.visible {
 
 .card .info {
   position: absolute;
-  bottom: -50%;
+  bottom: -100%;
   padding: 15px;
   opacity: 0;
   transition: 0.5s;
+  color: #ffee00;
+  font-size: 0.6rem;
+  line-height: 2;
 }
 
 .card:hover,
@@ -13274,23 +13277,27 @@ header a:hover {
   transform: scale(1.1);
   transition: transform 0.5s ease;
 }
+/* START LOJA ATUALIZADA*/
 
-.lojas {
-  background-color: var(--bs-body-color);
-  margin-bottom: -10px;
+
+.fotos {
+  margint: 30px;
+  margin-top: 30px;
 }
 
-.loja1 {
-  border-radius: 50px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.60);
-  margin-bottom: 50px;
+.title{
+  margin-bottom: 80px;
 }
 
-.loja2 {
-  border-radius: 50px;
-  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.60);
-  margin-bottom: 50px;
+.subtitle{
+  margin-top: 15%;
 }
+
+.texto{
+  margin: 10px;
+}
+
+/* END LOJA ATUALIZADA*/
 
 .d-block {
   border-radius: 50px;
